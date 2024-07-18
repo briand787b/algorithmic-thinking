@@ -20,7 +20,7 @@ unsigned* assign_line(unsigned num_lines, unsigned line_sizes[num_lines], unsign
       }
     }
 
-    chosen_lines[person] = smallest_line_idx;
+    chosen_lines[person] = smallest_line_size;
     line_sizes[smallest_line_idx]++;
   }
 
@@ -58,15 +58,15 @@ int main(void) {
     exit(EXIT_FAILURE);
   }
 
-  printf("num_lines: %u\n", num_lines);
-  printf("num_ppl: %u\n", num_ppl);
+  // printf("num_lines: %u\n", num_lines);
+  // printf("num_ppl: %u\n", num_ppl);
 
   unsigned* assignments = assign_line(num_lines, line_sizes, num_ppl);
-  printf("line_assignments: ");
+  // printf("line_assignments: ");
   for (unsigned i = 0; i < num_ppl; i++) {
-    printf("%u ", assignments[i]);
+    printf("%u\n", assignments[i]);
   }
-  putchar('\n');
+  // putchar('\n');
 
   free(assignments);
   return EXIT_SUCCESS;

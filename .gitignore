@@ -1,0 +1,4 @@
+#all binaries that contain algo should be named algo
+algo
+# all binaries that generate test fixtures should be called fixture
+fixture
